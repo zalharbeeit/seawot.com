@@ -1,0 +1,240 @@
+﻿ .button.b-close {
+    background-color: #F39C12;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+ .button.b-close.small {
+    border-radius: 15px;
+    float: right;
+    margin: 22px 5px 0;
+    padding: 6px 15px;
+}
+ 
+ .button.b-close:hover {
+    opacity:0.9;
+    color: rgba(255, 255, 255, 0.73);
+}
+ 
+ .button.b-close > span {
+    font-size: 84%;
+}
+ 
+ .button.b-close, .button.bClose {
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: none;
+    font: bold 131% sans-serif;
+    padding: 0 6px 2px;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+}
+
+#popup, #popup2, .bMulti {
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 25px 5px #999;
+    color: #111;
+    display: none;
+    min-width: 350px;
+    padding: 0 15px 15px 15px;
+}
+
+#popup .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona' ,sans;
+}
+
+#popup, .bMulti {
+    min-height: 250px;
+}
+
+#popup2 iframe {
+    background: url('../images/loader.gif') center center no-repeat;
+    min-height: 240px;
+    min-width: 500px;
+}
+
+.loading {
+    background: url('../images/loader.gif') center center no-repeat;
+}
+
+  #popup4 {
+    background-color: #fff;
+    border-radius: 2px;
+    color: #111;
+    display: none;
+    padding: 15px;
+}
+
+#popup4 .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona' ,sans;
+}
+
+#popup4 {
+    min-height: 240px;
+    min-width: 700px;
+    margin-top: -220px;
+    margin-left: -350px;
+}
+
+
+  #popup5 {
+    background-color: #fff;
+    border-radius: 2px;
+    color: #111;
+    display: none;
+    padding: 15px;
+}
+
+#popup5 .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona' ,sans;
+}
+
+#popup5 {
+    min-height: 50px;
+    min-width: 700px;
+    margin-top: -120px;
+    margin-left: -350px;
+}
+
+.b-loading {
+    box-shadow: none;
+    font-size:40px;
+    position: absolute;
+    color:#F39C12;
+    left: 50%;
+    top: 50%;
+    margin:-20px 0 0 -20px;
+}
+
+  #popup6 {
+    background-color: #fff;
+    border-radius: 2px;
+    color: #111;
+    display: none;
+    padding: 15px;
+}
+
+#popup6 .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona' ,sans;
+}
+
+#popup6 {
+    min-height: 240px;
+    min-width: 700px;
+    margin-top: -220px;
+    margin-left: -350px;
+}
+
+
+  #popup7 {
+    background-color: #fff;
+    border-radius: 2px;
+    color: #111;
+    display: none;
+    padding: 15px;
+}
+
+#popup7 .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona' ,sans;
+}
+
+#popup7 {
+    min-height: 240px;
+    min-width: 700px;
+    margin-top: -300px;
+    margin-left: -350px;
+}
+
+  #popup8 {
+    background-color: #fff;
+    border-radius: 2px;
+    color: #111;
+    display: none;
+    padding: 15px;
+}
+
+#popup8 .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona' ,sans;
+}
+
+#popup8 {
+    min-height: 240px;
+    min-width: 300px;
+    margin-top: -220px;
+    margin-left: -150px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .button.b-close {
+        display: inline-block;
+    }
+
+    #popup4 {
+        padding: 5px;
+    }
+
+    #popup4 {
+        min-height: 240px;
+        min-width: 440px;
+        margin-top: -180px;
+        margin-left: -220px;
+    }
+    #popup6 {
+        padding: 5px;
+    }
+
+    #popup6 {
+        min-height: 240px;
+        min-width: 440px;
+        margin-top: -180px;
+        margin-left: -220px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+
+        .button.b-close {
+        display: inline-block;
+    }
+
+    #popup4 {
+        padding: 5px;
+    }
+
+    #popup4 {
+        min-height: 240px;
+        min-width: 280px;
+        margin-top: -270px;
+        margin-left: -140px;
+    }
+
+     #popup6 {
+        padding: 5px;
+    }
+
+    #popup6 {
+        min-height: 240px;
+        min-width: 280px;
+        margin-top: -270px;
+        margin-left: -140px;
+    }
+}

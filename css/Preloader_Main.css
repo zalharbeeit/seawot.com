@@ -1,0 +1,513 @@
+﻿/*  Preloader affect
+ -------------------------------------------------------------------------------*/
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    right: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px -75px 0 0;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #fbfbfb;
+    -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    z-index: 1001;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-top-color: #000000;
+        -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-top-color: #d9d9d9;
+        -webkit-animation: spin 0.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 0.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg); /* IE 9 */
+        transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg); /* IE 9 */
+        transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg); /* IE 9 */
+        transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg); /* IE 9 */
+        transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #F39C12;
+    z-index: 1000;
+    -webkit-transform: translateX(0); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0); /* IE 9 */
+    transform: translateX(0); /* Firefox 16+, IE 10+, Opera */
+}
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%); /* IE 9 */
+    transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%); /* IE 9 */
+    transform: translateX(100%); /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateY(-100%); /* IE 9 */
+    transform: translateY(-100%); /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 0.3s 1s ease-out;
+    transition: all 0.3s 1s ease-out;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+    display: none;
+}
+
+.no-js h1 {
+    color: #222222;
+}
+
+
+/*************************  ثيم انتهاء الوقت  **************************/
+#idletimeout {
+    direction: rtl;
+    background: rgba(0,0,0,0.5);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+    font: 14px Droid_Sans_Arabic, sans-serif;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#idletimeout-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    background: rgba(0,0,0,0.5);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+    z-index: 9999;
+    color: #FFFFFF;
+    padding: 0 25px;
+    width: 550px;
+    height: 40px;
+    margin: -10px 0 0 -275px;
+    line-height: 40px;
+}
+
+    #idletimeout-top a {
+        font: bold 13px Droid_Sans_Arabic, sans-serif;
+        color: #F39C12;
+    }
+
+    #idletimeout-top span {
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+/***********************************************************/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #loader {
+        display: block;
+        position: relative;
+        right: 50%;
+        top: 50%;
+        width: 120px;
+        height: 120px;
+        margin: -60px -60px 0 0;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fbfbfb;
+        -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        z-index: 1001;
+    }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #000000;
+            -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #d9d9d9;
+            -webkit-animation: spin 0.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 0.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+    /*************************  ثيم انتهاء الوقت  **************************/
+    #idletimeout {
+        direction: rtl;
+        background: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+        font: 12px Droid_Sans_Arabic, sans-serif;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 100000;
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    #idletimeout-top {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        border-radius: 11px 11px 11px 11px;
+        -moz-border-radius: 11px 11px 11px 11px;
+        -webkit-border-radius: 11px 11px 11px 11px;
+        background: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+        z-index: 9999;
+        color: #FFFFFF;
+        padding: 0 25px;
+        width: 500px;
+        height: 40px;
+        margin: -10px 0 0 -250px;
+        line-height: 40px;
+    }
+
+        #idletimeout-top a {
+            font: bold 12px Droid_Sans_Arabic, sans-serif;
+            color: #F39C12;
+        }
+
+        #idletimeout-top span {
+            font-weight: bold;
+            font-size: 12px;
+        }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #loader {
+        display: block;
+        position: relative;
+        right: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px -50px 0 0;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fbfbfb;
+        -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        z-index: 1001;
+    }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #000000;
+            -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #d9d9d9;
+            -webkit-animation: spin 0.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 0.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+
+    /*************************  ثيم انتهاء الوقت  **************************/
+    #idletimeout {
+        direction: rtl;
+        background: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+        font: 11px Droid_Sans_Arabic, sans-serif;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 100000;
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    #idletimeout-top {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        border-radius: 11px 11px 11px 11px;
+        -moz-border-radius: 11px 11px 11px 11px;
+        -webkit-border-radius: 11px 11px 11px 11px;
+        background: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+        z-index: 9999;
+        color: #FFFFFF;
+        padding: 0 25px;
+        width: 420px;
+        height: 40px;
+        margin: -10px 0 0 -210px;
+        line-height: 40px;
+    }
+
+        #idletimeout-top a {
+            font: bold 11px Droid_Sans_Arabic, sans-serif;
+            color: #F39C12;
+        }
+
+        #idletimeout-top span {
+            font-weight: bold;
+            font-size: 11px;
+        }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    /*  Preloader affect
+ -------------------------------------------------------------------------------*/
+    #loader {
+        display: block;
+        position: relative;
+        right: 50%;
+        top: 50%;
+        width: 90px;
+        height: 90px;
+        margin: -45px -45px 0 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: #fbfbfb;
+        -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        z-index: 1001;
+    }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: #000000;
+            -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: #d9d9d9;
+            -webkit-animation: spin 0.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 0.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+    /*************************  ثيم انتهاء الوقت  **************************/
+    #idletimeout {
+        direction: rtl;
+        background: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+        font: 100 6px DroidKufi-Regular, sans-serif;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 100000;
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    #idletimeout-top {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        border-radius: 11px 11px 11px 11px;
+        -moz-border-radius: 11px 11px 11px 11px;
+        -webkit-border-radius: 11px 11px 11px 11px;
+        background: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.5)), color-stop(68%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.5)));
+        background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 68%, rgba(0,0,0,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr= '#000000', GradientType=1 );
+        z-index: 9999;
+        color: #FFFFFF;
+        padding: 0 3px;
+        width: 310px;
+        height: 40px;
+        margin: -10px 0 0 -155px;
+        line-height: 40px;
+    }
+
+        #idletimeout-top a {
+            font: 100 6px DroidKufi-Regular, sans-serif;
+            color: #F39C12;
+        }
+
+        #idletimeout-top span {
+            font-weight: 100;
+            font-size: 6px;
+        }
+}

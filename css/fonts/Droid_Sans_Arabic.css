@@ -1,0 +1,10 @@
+﻿	@font-face {
+        font-family: "Droid_Sans_Arabic";
+        src: url('../../fonts/Droid_Sans_Arabic/603118897-DroidSansArabic.eot');
+        src: url('../../fonts/Droid_Sans_Arabic/603118897-DroidSansArabic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Droid_Sans_Arabic/603118897-DroidSansArabic.svg#Droid Sans Arabic') format('svg'),
+        url('../../fonts/Droid_Sans_Arabic/603118897-DroidSansArabic.woff') format('woff'),
+        url('../../fonts/Droid_Sans_Arabic/603118897-DroidSansArabic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }

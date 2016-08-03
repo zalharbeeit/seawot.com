@@ -1,0 +1,680 @@
+@media (max-width: 767px) and (min-width: 480px) {
+    #mobile-nav {
+        padding: 0;
+        position: relative;
+    }
+
+    .slicknav_btn {
+        position: relative;
+        display: block;
+        vertical-align: middle;
+        float: left;
+        padding: 0.338em 0.425em;
+        line-height: 1.125em;
+        cursor: pointer;
+        outline: none;
+    }
+
+        .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+            margin-top: 0.188em;
+        }
+
+    .slicknav_menu {
+        *zoom: 1;
+    }
+
+        .slicknav_menu .slicknav_menutxt {
+            position: absolute;
+            display: block;
+            line-height: 1.188em;
+            float: right;
+            margin: 0 0 0 10px;
+        }
+
+
+        .slicknav_menu .slicknav_icon {
+            float: right;
+            width: 18px;
+            height: 14px;
+        }
+
+            .slicknav_menu .slicknav_icon:before {
+                background: transparent;
+                width: 1.125em;
+                height: 0.875em;
+                display: block;
+                content: "";
+                position: absolute;
+            }
+
+        .slicknav_menu .slicknav_icon-bar {
+            display: block;
+            width: 1.125em;
+            height: 0.125em;
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            border-radius: 1px;
+            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .slicknav_menu:before {
+            content: " ";
+            display: table;
+        }
+
+        .slicknav_menu:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+    .slicknav_nav {
+        clear: both;
+    }
+
+        .slicknav_nav ul {
+            display: block;
+        }
+
+        .slicknav_nav li {
+            display: block;
+        }
+
+        .slicknav_nav a {
+            display: block;
+        }
+
+    .slicknav_menu {
+        font-size: 16px;
+        box-sizing: border-box;
+        background: #ffffff;
+        padding: 5px;
+        font-family: DroidKufi-Regular, sans-serif;
+        -moz-box-shadow: 0 1px 1px rgba(246, 166, 0, 0.78);
+        -webkit-box-shadow: 0 1px 1px rgba(246, 166, 0, 0.78);
+        box-shadow: 0 1px 1px rgba(246, 166, 0, 0.78);
+    }
+
+        .slicknav_menu * {
+            box-sizing: border-box;
+        }
+
+        .slicknav_menu .slicknav_menutxt {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 1px 3px #000;
+        }
+
+        .slicknav_menu .slicknav_icon-bar {
+            background-color: #fff;
+        }
+
+    .slicknav_btn {
+        margin: 11px 5px 11px;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: 1px solid #F39C12;
+    }
+
+        .slicknav_btn:hover, .slicknav_btn:focus {
+            background-color: rgba(177, 177, 177, 0.15);
+        }
+
+        .slicknav_btn:active {
+            background-color: rgba(243, 156, 18, 0.55);
+        }
+
+        .slicknav_btn:active > .c-hamburger span,
+        .slicknav_btn:active > .c-hamburger span::after,
+        .slicknav_btn:active > .c-hamburger span::before
+        {
+            background-color: #FFFFFF!important;
+        }
+
+    .slicknav_nav {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-size: 0.875em;
+        list-style: none;
+        overflow: hidden;
+        counter-reset: section;
+        list-style-type: none;
+    }
+
+        .slicknav_nav li a::before {
+            counter-increment: section;
+            content: counters(section,".") " - ";
+        }
+
+        .slicknav_nav ul {
+            list-style: none;
+            overflow: hidden;
+            padding: 0;
+            margin: 0 20px 0 0;
+        }
+
+        .slicknav_nav a {
+            padding: 5px 10px;
+            margin: 2px 5px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .slicknav_nav .slicknav_txtnode {
+            margin-right: 15px;
+        }
+
+        .slicknav_nav .slicknav_item a {
+            padding: 0;
+            margin: 0;
+        }
+
+    .mobile-nav_logo {
+        position: absolute;
+        top: 0;
+         right: 50%;
+        margin-top: 1.5px;
+        margin-right:-170px;
+        height: 62px;
+        width: 320px;
+        transition: height 0.3s linear 0s, padding 0.3s linear 0s,width 0.3s linear 0s;
+    }
+
+        .mobile-nav_logo img {
+            background: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -ms-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+            padding: 5px 0;
+        }
+
+    .slicknav_nav li a > span .border {
+        margin-top:2px;
+        display: block;
+        height: 3px;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
+    .slicknav_nav > li a > span .border:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(243, 156, 18, 0.83);
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .slicknav_nav > li a:hover, .slicknav_nav > li a:focus {
+        outline: none;
+    }
+
+        .slicknav_nav > li a:hover > span, .slicknav_nav > li a:focus > span {
+            outline: none;
+        }
+
+            .slicknav_nav > li a:hover > span .border:before, .slicknav_nav > li a:focus > span .border:before {
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+
+    .slicknav_nav > li.active a {
+        background: transparent;
+    }
+
+        .slicknav_nav > li.active a > span .border {
+            background:   rgba(156, 156, 156, 0.54);
+        }
+
+
+    .c-hamburger {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 4px 2px 0 2px;
+        padding: 0;
+        width: 18px;
+        height: 14px;
+        font-size: 0;
+        text-indent: -9999px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+        vertical-align: middle;
+        cursor: pointer;
+        outline: none;
+        vertical-align: middle;
+        float: left;
+    }
+
+        .c-hamburger:focus {
+            outline: none;
+        }
+
+        .c-hamburger span {
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #F39C12;
+        }
+
+            .c-hamburger span::before,
+            .c-hamburger span::after {
+                position: absolute;
+                display: block;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #F39C12;
+                content: "";
+            }
+
+            .c-hamburger span::before {
+                top: -5px;
+            }
+
+            .c-hamburger span::after {
+                bottom: -5px;
+            }
+    /** Style 1*/
+    .c-hamburger--rot {
+        background-color: rgba(255, 255, 255, 0.00);
+    }
+
+        .c-hamburger--rot span {
+            transition: transform 0.3s;
+        }
+
+        /* active state, i.e. menu open */
+        .c-hamburger--rot.is-active {
+            background-color: rgba(255, 255, 255, 0.00);
+        }
+
+            .c-hamburger--rot.is-active span {
+                transform: rotate(90deg);
+            }
+}
+
+@media (max-width: 479px) and (min-width: 320px) {
+    #mobile-nav {
+        padding: 0;
+        position: relative;
+    }
+
+    .slicknav_btn {
+        position: relative;
+        display: block;
+        vertical-align: middle;
+        float: left;
+        padding: 0.338em 0.425em;
+        line-height: 1.125em;
+        cursor: pointer;
+        outline: none;
+    }
+
+        .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+            margin-top: 0.188em;
+        }
+
+    .slicknav_menu {
+        *zoom: 1;
+    }
+
+        .slicknav_menu .slicknav_menutxt {
+            position: absolute;
+            display: block;
+            line-height: 1.188em;
+            float: right;
+            margin: 0 0 0 10px;
+        }
+
+
+        .slicknav_menu .slicknav_icon {
+            float: right;
+            width: 18px;
+            height: 14px;
+        }
+
+            .slicknav_menu .slicknav_icon:before {
+                background: transparent;
+                width: 1.125em;
+                height: 0.875em;
+                display: block;
+                content: "";
+                position: absolute;
+            }
+
+        .slicknav_menu .slicknav_icon-bar {
+            display: block;
+            width: 1.125em;
+            height: 0.125em;
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            border-radius: 1px;
+            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .slicknav_menu:before {
+            content: " ";
+            display: table;
+        }
+
+        .slicknav_menu:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+    .slicknav_nav {
+        clear: both;
+    }
+
+        .slicknav_nav ul {
+            display: block;
+        }
+
+        .slicknav_nav li {
+            display: block;
+        }
+
+        .slicknav_nav a {
+            display: block;
+        }
+
+    .slicknav_menu {
+        font-size: 16px;
+        box-sizing: border-box;
+        background: #ffffff;
+        padding: 5px;
+        font-family: DroidKufi-Regular, sans-serif;
+         -moz-box-shadow: 0 1px 1px rgba(246, 166, 0, 0.78);
+        -webkit-box-shadow: 0 1px 1px rgba(246, 166, 0, 0.78);
+        box-shadow: 0 1px 1px rgba(246, 166, 0, 0.78);
+    }
+
+        .slicknav_menu * {
+            box-sizing: border-box;
+        }
+
+        .slicknav_menu .slicknav_menutxt {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 1px 3px #000;
+        }
+
+        .slicknav_menu .slicknav_icon-bar {
+            background-color: #fff;
+        }
+
+    .slicknav_btn {
+        margin: 11px 5px 11px;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: 1px solid #F39C12;
+    }
+
+        .slicknav_btn:hover, .slicknav_btn:focus {
+            background-color: rgba(177, 177, 177, 0.15);
+        }
+
+        .slicknav_btn:active {
+            background-color: rgba(243, 156, 18, 0.55);
+        }
+
+        .slicknav_btn:active > .c-hamburger span,
+        .slicknav_btn:active > .c-hamburger span::after,
+        .slicknav_btn:active > .c-hamburger span::before
+        {
+            background-color: #FFFFFF!important;
+        }
+
+    .slicknav_nav {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-size: 0.875em;
+        list-style: none;
+        overflow: hidden;
+        counter-reset: section;
+        list-style-type: none;
+    }
+
+        .slicknav_nav li a::before {
+            counter-increment: section;
+            content: counters(section,".") " - ";
+        }
+
+        .slicknav_nav ul {
+            list-style: none;
+            overflow: hidden;
+            padding: 0;
+            margin: 0 20px 0 0;
+        }
+
+        .slicknav_nav a {
+            padding: 5px 10px;
+            margin: 2px 5px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .slicknav_nav .slicknav_txtnode {
+            margin-right: 15px;
+        }
+
+        .slicknav_nav .slicknav_item a {
+            padding: 0;
+            margin: 0;
+        }
+
+    .mobile-nav_logo {
+        position: absolute;
+         top: 0;
+         right: 50%;
+        margin-top: 5.5px;
+        margin-right:-140px;
+        height: 52px;
+        width: 260px;
+        transition: height 0.3s linear 0s, padding 0.3s linear 0s,width 0.3s linear 0s;
+    }
+
+        .mobile-nav_logo img {
+            background: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -ms-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+            padding: 5px 0;
+        }
+
+
+    .slicknav_nav li a > span .border {
+        margin-top: 2px;
+        display: block;
+        height: 3px;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
+    .slicknav_nav > li a > span .border:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+         background: rgba(243, 156, 18, 0.83);
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .slicknav_nav > li a:hover, .slicknav_nav > li a:focus {
+        outline: none;
+    }
+
+        .slicknav_nav > li a:hover > span, .slicknav_nav > li a:focus > span {
+            outline: none;
+        }
+
+            .slicknav_nav > li a:hover > span .border:before, .slicknav_nav > li a:focus > span .border:before {
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+
+    .slicknav_nav > li.active a {
+        background: transparent;
+    }
+
+        .slicknav_nav > li.active a > span .border {
+            background: rgba(156, 156, 156, 0.54);
+        }
+
+
+    .c-hamburger {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 4px 2px 0 2px;
+        padding: 0;
+        width: 18px;
+        height: 14px;
+        font-size: 0;
+        text-indent: -9999px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+        vertical-align: middle;
+        cursor: pointer;
+        outline: none;
+        vertical-align: middle;
+        float: left;
+    }
+
+        .c-hamburger:focus {
+            outline: none;
+        }
+
+        .c-hamburger span {
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #F39C12;
+        }
+
+            .c-hamburger span::before,
+            .c-hamburger span::after {
+                position: absolute;
+                display: block;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #F39C12;
+                content: "";
+            }
+
+            .c-hamburger span::before {
+                top: -5px;
+            }
+
+            .c-hamburger span::after {
+                bottom: -5px;
+            }
+    /** Style 1*/
+    .c-hamburger--rot {
+        background-color: rgba(255, 255, 255, 0.00);
+    }
+
+        .c-hamburger--rot span {
+            transition: transform 0.3s;
+        }
+
+        /* active state, i.e. menu open */
+        .c-hamburger--rot.is-active {
+            background-color: rgba(255, 255, 255, 0.00);
+        }
+
+            .c-hamburger--rot.is-active span {
+                transform: rotate(90deg);
+            }
+}
